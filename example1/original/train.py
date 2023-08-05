@@ -42,7 +42,7 @@ def train(model,optimizer,loss_fn,train_loader,device):
     optimizer.step()
     optimizer.zero_grad()
 
-    handler.logger('loss : '+losses.avg)
+    handler.log('loss : '+losses.avg)
     score = metrics.accuracy(label.detach().cpu().numpy(),pred.detach().cpu().numpy())
   
   return losses.avg,score
