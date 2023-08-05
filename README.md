@@ -26,7 +26,7 @@ bash install.sh
 ### How to run file
 
 ```
-python run.py --repo_path 'path_to_repo' --corr_repo_path 'path_to_correct_repo' --required_callee 'log' --loglevel 'debug'
+python run.py --repo_path 'path_to_example1_original_folder' --required_callee 'log' --loglevel 'debug'
 ```
 
 
