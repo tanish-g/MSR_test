@@ -10,8 +10,6 @@ from evaluate import load
 
 openai.api_key = 'YOUR_OPENAI_API_KEY'
 
-global caller_callee_relation
-
 def traverse_ast_rc(node,function_name,required_callee):
   ##If class is caller then all function becomes its callee else functions which are call within function becomes caller callee
   if (node.type=='function_definition' or node.type=='class_definition') and function_name is None:
@@ -21,7 +19,7 @@ def traverse_ast_rc(node,function_name,required_callee):
   
   elif node.type=='function_definition':
 
-    if node.children[1].text==required_callee.encode('ASCII'):
+    if required_callee in node.children[1].text.decode:
       caller_callee_relation[function_name].append(node.children[1].text)
     
     function_name = node.children[1].text
@@ -29,7 +27,7 @@ def traverse_ast_rc(node,function_name,required_callee):
 
   elif node.type=='call':
       
-      if node.children[0].text==required_callee.encode('ASCII'):
+      if required_callee in node.children[0].text.decode('ASCII'):
         caller_callee_relation[function_name].append(node.children[0].text)
   
   for child in node.children:
@@ -93,7 +91,7 @@ def main(repo_path,cuda,required_callee,loglevel):
                 root_node = tree.root_node
                 
                 # Step 2: Identify caller-callee relations between functions
-
+                global caller_callee_relations
                 caller_callee_relations = {}
                 traverse_ast_rc(root_node,None,required_callee)
                 
