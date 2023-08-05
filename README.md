@@ -29,15 +29,14 @@ bash install.sh
 python run.py --repo_path 'path_to_repo' --corr_repo_path 'path_to_correct_repo' --required_callee 'log' --loglevel 'debug'
 ```
 
-Not able to use open-ai api due to quota expired but run the same prompt on gpt side these are the results for example1
 
- ![Screenshot 2023-08-05 at 6 56 45 PM](https://github.com/tanish-g/MSR_test/assets/55942819/d068d341-721d-42e7-baa4-a517f09d7188)
 
-![Screenshot 2023-08-05 at 6 59 03 PM](https://github.com/tanish-g/MSR_test/assets/55942819/5028a0c8-64b2-40e6-bcf2-dd02a3ce4fc6)
+https://github.com/tanish-g/MSR_test/assets/55942819/e5e450d1-3fdc-4210-a0e5-8345d03d2457
 
-![Screenshot 2023-08-05 at 7 04 27 PM](https://github.com/tanish-g/MSR_test/assets/55942819/9d6c17da-044a-4eb7-8cdf-b5fb101b6051)
 
-![Screenshot 2023-08-05 at 7 06 40 PM](https://github.com/tanish-g/MSR_test/assets/55942819/3f9305c6-20f8-4cde-bdce-e4cc4474e50f)
+
+
+
 
 
 
