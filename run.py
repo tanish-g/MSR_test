@@ -54,7 +54,7 @@ def correct_function_call(code,caller_name, callee_name, loglevel,argument):
 
     # Generate a corrected function call using LLM
     response = openai.Completion.create(
-        engine="davinci-codex",  
+        engine="gpt-3.5-turbo",  
         prompt=prompt,
         max_tokens=100
     )
