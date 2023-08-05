@@ -30,6 +30,7 @@ python run.py --repo_path 'path_to_repo' --corr_repo_path 'path_to_correct_repo'
 ```
 
 
+Used Chat gpt api because was not able to use heavy transformer models like wizard coder and  instruct code on free tier of colab
 
 https://github.com/tanish-g/MSR_test/assets/55942819/e5e450d1-3fdc-4210-a0e5-8345d03d2457
 
