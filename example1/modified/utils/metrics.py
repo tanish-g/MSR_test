@@ -4,13 +4,13 @@ class composed_metrics():
   def __init__(self,handler):
     self.handler = handler
 
-  def mae(self,y_true, y_pred):
+  def mae(self,y_true, y_pred,loglevel='debug'):
       score = mean_absolute_error(y_true, y_pred) # RMSE
-      self.handler.log('mae : ' + str(score),loglevel='debug')
+      self.handler.log('mae : ' + str(score),loglevel=loglevel)
       return score
 
 
-  def accuracy(self,y_true, y_pred):
+  def accuracy(self,y_true, y_pred,loglevel='debug'):
       score = accuracy_score(y_true, y_pred)
-      self.handler.log('accuracy : ' + str(score),loglevel='debug')
+      self.handler.log('accuracy : ' + str(score),loglevel=loglevel)
       return score
