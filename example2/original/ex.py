@@ -1,15 +1,15 @@
 class rep():
-  def log(str):
+  def log(self,str):
     print(str)
   
-  def test():
+  def test(self):
     text = 'Started Testing of Model'
     log(text)
   
-  def train():
+  def train(self):
     text = 'Started Training of Model'
     log(text)
   
-  def comb():
+  def comb(self):
     train()
     test()
