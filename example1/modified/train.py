@@ -18,7 +18,7 @@ class AverageMeter(object):
         self.count += n
         self.avg = self.sum / self.count
 
-def train(model,optimizer,loss_fn,train_loader,device):
+def train(model,optimizer,loss_fn,train_loader,device,loglevel='debug'):
   
   model.train()
   losses = AverageMeter()
@@ -42,7 +42,7 @@ def train(model,optimizer,loss_fn,train_loader,device):
     optimizer.step()
     optimizer.zero_grad()
 
-    handler.log('loss : '+losses.avg,loglevel='debug')
+    handler.log('loss : '+losses.avg,loglevel=loglevel)
     score = metrics.accuracy(label.detach().cpu().numpy(),pred.detach().cpu().numpy())
   
   return losses.avg,score
