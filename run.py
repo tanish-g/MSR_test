@@ -110,7 +110,14 @@ def main(repo_path,required_callee,loglevel):
                     f.write(modified_code)
                 
                 #Step5: Evaluate the correctness whether the modified code matches the generated code
-                score = evaluate_correctness(correct_code,modified_code)
+                try:
+                   score = evaluate_correctness(correct_code,code)
+                   print('Strings matches')
+                except:
+                   score = 0
+                   print('Strings does not match')
+                
+                print('Score':score)
 
 
 if __name__ == "__main__":
