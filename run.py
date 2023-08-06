@@ -46,7 +46,6 @@ def correct_function_call(code,caller_name, callee_name, loglevel,argument):
     # Create a prompt for the LLM to generate a corrected function call
     prompt = f"Given the code,\n\n" \
              f"{code}" \
-             f"Correct the function call:\n" \
              f"Caller: {caller_name}\n" \
              f"Callee: {callee_name}\n" \
              f"Log Level: {loglevel}\n" \
